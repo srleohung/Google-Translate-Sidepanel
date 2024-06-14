@@ -14,9 +14,10 @@ function App() {
         </a>
       </div>
       <p id="select-a-word">Highlight or right-click on a section of text and click on Translate icon next to it to translate it to your language.</p>
-      <h1 id="definition-word"></h1>
       <div className="card">
-        <h2 id="definition-text"></h2>
+        <h1 id="definition-word"></h1>
+        <i id="voice" class="material-icons btn">play_circle</i>
+        <h1 id="definition-text"></h1>
         <h3 id="definition-additional"></h3>
       </div>
       <p className="read-the-docs" id="definition-detected-language"></p>

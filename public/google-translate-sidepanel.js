@@ -94,3 +94,18 @@ function voice(text, language) {
 
   return audio.play();
 }
+
+document.addEventListener('click', (event) => {
+  switch (event.target.id) {
+    case 'voice':
+      sourceLanguage = "en"
+      chrome.storage.session.get('lastWord', ({ lastWord }) => {
+        if (lastWord) {
+          voice(lastWord, sourceLanguage)
+        }
+      });
+      break;
+    default:
+      console.log(event)
+  }
+});
