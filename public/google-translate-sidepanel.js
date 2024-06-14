@@ -23,21 +23,23 @@ async function updateDefinition(word) {
   targetLanguage = "zh-TW"
   text = word
 
-  // Hide instructions.
-  document.body.querySelector('#select-a-word').style.display = 'none';
-
-  // Show word and definition.
-  document.body.querySelector('#definition-word').innerText = word;
   try {
     const { result, additional, detectedLanguage } = await translate(text, sourceLanguage, targetLanguage)
+    voice(text, sourceLanguage)
+
+    // Hide instructions.
+    document.body.querySelector('#select-a-word').style.display = 'none';
+
+    // Show word and definition.
+    document.body.querySelector('#definition-word').innerText = word;
     document.body.querySelector('#definition-text').innerText = result
     document.body.querySelector('#definition-additional').innerHTML = additional
-    document.body.querySelector('#definition-detectedLanguage').innerText = detectedLanguage
-    voice(text, sourceLanguage)
+    document.body.querySelector('#definition-detected-language').innerText = `Highlight or right-click on a section of text and click on Translate icon next to it to translate it to ${detectedLanguage}`
+
   } catch (e) {
     document.body.querySelector('#definition-text').innerText = e
     document.body.querySelector('#definition-additional').innerHTML = ''
-    document.body.querySelector('#definition-detectedLanguage').innerText = ''
+    document.body.querySelector('#definition-detected-language').innerText = ''
   }
 }
 
