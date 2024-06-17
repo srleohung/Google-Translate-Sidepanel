@@ -1,0 +1,15 @@
+#dynamic-logo {
+    height: 100px;
+    width: 100px;
+    background: rgb(108, 173, 238);
+    overflow: hidden;
+    margin: auto;
+    opacity: 1;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px;
+}
+
+#dynamic-logo:hover {
+    overflow: unset;
+    opacity: 0.3;
+}

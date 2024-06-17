@@ -1,19 +1,13 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import DynamicLogo from './DynamicLogo.jsx'
 
 function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+
+      <div className="logo react">
+        <DynamicLogo />
       </div>
-      <p id="select-a-word">Highlight or right-click on a section of text and click on Translate icon next to it to translate it to your language.</p>
       <div className="card">
         <h1 id="definition-word"></h1>
         <i id="definition-voice" class="material-icons btn off">play_circle</i>
@@ -21,6 +15,8 @@ function App() {
         <h3 id="definition-additional"></h3>
       </div>
       <p className="read-the-docs" id="definition-detected-language"></p>
+      <p id="select-a-word">Highlight or right-click on a section of text and click on Translate icon next to it to translate it to your language.</p>
+      <a href="https://translate.google.com/" target="_blank">Google Translate</a>
     </>
   )
 }
