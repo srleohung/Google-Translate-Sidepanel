@@ -29,6 +29,7 @@ async function updateDefinition(word) {
 
     // Hide instructions.
     document.body.querySelector('#select-a-word').style.display = 'none';
+    document.body.querySelector('#definition-voice').classList.remove('off')
 
     // Show word and definition.
     document.body.querySelector('#definition-word').innerText = word;
@@ -97,7 +98,7 @@ function voice(text, language) {
 
 document.addEventListener('click', (event) => {
   switch (event.target.id) {
-    case 'voice':
+    case 'definition-voice':
       sourceLanguage = "en"
       chrome.storage.session.get('lastWord', ({ lastWord }) => {
         if (lastWord) {
