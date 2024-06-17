@@ -4,11 +4,10 @@ View translations easily as you browse the web. Highlight or right-click on a se
 <img src="./docs/side-panel.png" alt="side-panel">
 
 ## Running this extension
-1. Clone this repository.
-2. Load this directory in Chrome as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
-3. Go to https://developer.chrome.com/docs/extensions/
-4. Right-click on the "Extensions" word.
-5. Choose the "Google Translate Sidepanel" context menu
+1. Download [dist.zip](https://github.com/srleohung/Google-Translate-Sidepanel/releases/download/v0.1/dist.zip) from the [latest release](https://github.com/srleohung/Google-Translate-Sidepanel/releases/tag/v0.1).
+2. Go to [Extensions](chrome://extensions/)
+3. Unzip and load the directory in Chrome as an [unpacked extension](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked).
+4. Click the toggle on the "Google Translate Sidepanel" extension.
 
 You should see this on the menu when you right-click:
 

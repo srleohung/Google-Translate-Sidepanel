@@ -3,6 +3,7 @@ node_modules
 
 # Output directory
 dist
+dist.zip
 
 # @vitjs/vit temporary directory
 .vit
